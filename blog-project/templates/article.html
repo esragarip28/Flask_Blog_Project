@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+{% if  article %}
+<h4 style="font-size:30px" class="text-center text-danger text-font">{{article.title}}</h4>
+<hr>
+<h4 class="text-font">Yazar:{{article.author}}</h4>
+<hr>
+<h4  class="text-font">{{article.content|safe}}</h4>
+{% else  %}
+
+    <div class="alert alert-danger">
+    Böyle bir makale bulunmuyor....
+        </div>
+
+{% endif %}
+
+{% endblock body %}
